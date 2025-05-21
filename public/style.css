@@ -1,0 +1,112 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  color: #fff;
+}
+form {
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  background: #2e2e4d;
+  color: #eee;
+}
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #4285f4;
+  background: #3f3f67;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.error-message {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: none;
+}
+button {
+  width: 100%;
+  background: #4285f4;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background: #357ae8;
+}
+.loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: none;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.response-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  display: none;
+}
+.response-message.success {
+  color: #4caf50;
+}
+.response-message.error {
+  color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  form {
+    padding: 20px;
+  }
+}
